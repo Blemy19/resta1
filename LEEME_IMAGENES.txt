@@ -1,0 +1,35 @@
+IMÁGENES DEL RESTAURANTE — ARCHIVO ORGANIZADO PARA CODEX
+24 fotos extraídas del ZIP de WhatsApp; no se alteraron ni recomprimieron.
+
+Copiar la carpeta assets/images/ de este ZIP dentro de la carpeta existente del proyecto Invitación Restaurante.
+No copiar encima de archivos homónimos sin respaldarlos.
+Indicarle a Codex que analice las referencias y use los archivos localmente.
+
+Aviso: varias referencias incluyen texto superpuesto, interfaces de redes sociales o collage.
+No usarlas tal cual si el texto o las marcas molestan; evaluar recortes permitidos sin alterar rostros.
+
+ÍNDICE DE ARCHIVOS:
+assets/images/referencias/referencias_01.jpeg  <-  WhatsApp Image 2026-10-15 at 15.03.11.jpeg
+assets/images/decoracion/decoracion_01.jpeg  <-  WhatsApp Image 2026-10-15 at 15.03.13.jpeg
+assets/images/gastronomia/gastronomia_01.jpeg  <-  WhatsApp Image 2026-10-15 at 15.03.13 (1).jpeg
+assets/images/gastronomia/gastronomia_02.jpeg  <-  WhatsApp Image 2026-10-15 at 15.03.14.jpeg
+assets/images/gastronomia/gastronomia_03.jpeg  <-  WhatsApp Image 2026-10-15 at 15.03.15.jpeg
+assets/images/gastronomia/gastronomia_04.jpeg  <-  WhatsApp Image 2026-10-15 at 15.03.15 (1).jpeg
+assets/images/gastronomia/gastronomia_05.jpeg  <-  WhatsApp Image 2026-10-15 at 15.03.15 (2).jpeg
+assets/images/gastronomia/gastronomia_06.jpeg  <-  WhatsApp Image 2026-10-15 at 15.03.15 (3).jpeg
+assets/images/decoracion/decoracion_02.jpeg  <-  WhatsApp Image 2026-10-15 at 15.03.16.jpeg
+assets/images/decoracion/decoracion_03.jpeg  <-  WhatsApp Image 2026-10-15 at 15.03.16 (1).jpeg
+assets/images/gastronomia/gastronomia_07.jpeg  <-  WhatsApp Image 2026-10-15 at 15.03.18.jpeg
+assets/images/gastronomia/gastronomia_08.jpeg  <-  WhatsApp Image 2026-10-15 at 15.03.18 (1).jpeg
+assets/images/bebidas/bebidas_01.jpeg  <-  WhatsApp Image 2026-10-15 at 15.03.18 (2).jpeg
+assets/images/gastronomia/gastronomia_09.jpeg  <-  WhatsApp Image 2026-10-15 at 15.03.18 (3).jpeg
+assets/images/bartender/bartender_01.jpeg  <-  WhatsApp Image 2026-10-15 at 15.03.19.jpeg
+assets/images/bebidas/bebidas_02.jpeg  <-  WhatsApp Image 2026-10-15 at 15.03.19 (1).jpeg
+assets/images/bartender/bartender_02.jpeg  <-  WhatsApp Image 2026-10-15 at 15.03.19 (2).jpeg
+assets/images/bebidas/bebidas_03.jpeg  <-  WhatsApp Image 2026-10-15 at 15.03.19 (3).jpeg
+assets/images/decoracion/decoracion_04.jpeg  <-  WhatsApp Image 2026-10-15 at 15.03.19 (4).jpeg
+assets/images/bartender/bartender_03.jpeg  <-  WhatsApp Image 2026-10-15 at 15.03.20.jpeg
+assets/images/decoracion/decoracion_05.jpeg  <-  WhatsApp Image 2026-10-15 at 15.03.20 (1).jpeg
+assets/images/decoracion/decoracion_06.jpeg  <-  WhatsApp Image 2026-10-15 at 15.03.20 (2).jpeg
+assets/images/decoracion/decoracion_07.jpeg  <-  WhatsApp Image 2026-10-15 at 15.03.20 (3).jpeg
+assets/images/decoracion/decoracion_08.jpeg  <-  WhatsApp Image 2026-10-15 at 15.03.20 (4).jpeg

@@ -1,0 +1,69 @@
+/* Edición especial: ornamentación botánica, recorrido editorial e interacciones sutiles */
+:root{--ornament:#bd9c61;--ivory:#faf8f1;--deep:#33422e}
+/* detalles sobre bienvenida */
+.restaurant-entrance:before{content:"";position:absolute;inset:14px;border:1px solid #c6a56855;z-index:4;pointer-events:none}
+.entrance-laurel{display:flex;align-items:center;justify-content:center;gap:18px;color:#d4bc86;font:20px Georgia,serif;margin-bottom:12px;opacity:.95}
+.entrance-laurel span:first-child{transform:rotate(-30deg)}.entrance-laurel span:last-child{transform:rotate(150deg)}.entrance-laurel b{font-size:12px;font-weight:normal}
+.portal-inscription{position:absolute;top:4%;width:100%;font:500 9px/1.5 Arial,sans-serif;letter-spacing:.24em;text-align:center;color:#e1c791;text-shadow:0 2px 6px #000b;z-index:1;pointer-events:none}
+.foliage-frame{position:absolute;z-index:5;top:19%;bottom:13%;width:55px;display:flex;justify-content:space-around;align-items:center;flex-direction:column;pointer-events:none;color:#aebc90;opacity:.75;filter:drop-shadow(0 3px 5px #0008)}
+.foliage-frame::before{content:"";position:absolute;left:50%;top:0;bottom:0;border-left:2px solid #788a60;transform:rotate(9deg);z-index:-1}
+.foliage-frame span{font:26px Georgia,serif;text-shadow:0 0 14px #d0bc8b66}
+.foliage-frame span:nth-child(2){font-size:11px;color:#d7bd82}
+.foliage-frame-l{left:11%}.foliage-frame-r{right:11%;transform:scaleX(-1)}
+@media(min-width:900px){.entrance-copy{backdrop-filter:blur(1px)}}
+.ornament-line{display:flex;align-items:center;gap:10px;margin-bottom:24px;color:#b08f57;font:14px Georgia,serif}
+.ornament-line:after{content:"";width:82px;height:1px;background:linear-gradient(90deg,#af905a,transparent)}
+.hero-photo-coin{position:absolute;top:8%;right:7%;z-index:3;width:75px;height:75px;border:1px solid #eadcbb9e;border-radius:50%;color:#f9f4df;background:#28372996;backdrop-filter:blur(6px);display:flex;flex-direction:column;align-items:center;justify-content:center;font:28px/1 Georgia,serif;box-shadow:0 5px 15px #0003}
+.hero-photo-coin small{font:10px/1.8 Arial,sans-serif;letter-spacing:.13em}
+.experience-section{background:#e9eadf;padding:94px max(6%,calc((100vw - 1200px)/2)) 72px;position:relative;overflow:hidden}
+.experience-section:before,.experience-section:after{content:"❧";position:absolute;color:#6b825938;font:clamp(160px,22vw,340px) Georgia,serif;pointer-events:none}
+.experience-section:before{left:-5%;top:-85px;transform:rotate(-22deg)}.experience-section:after{right:-4%;bottom:-150px;transform:rotate(160deg)}
+.experience-intro{text-align:center;position:relative;z-index:1}.experience-intro .eyebrow{margin-bottom:8px;color:#826b45}
+.experience-flourish{color:#9f895c;letter-spacing:.13em;font:14px Georgia,serif;margin:14px 0 20px}
+.experience-intro h2,.between-copy h2,.toast-section h2{font:400 clamp(42px,5.1vw,75px)/1.1 Georgia,serif;letter-spacing:-.035em;margin:0;color:#354331}
+.experience-intro h2 em,.between-copy h2 em,.toast-section h2 em{font-weight:400;color:#a58552}
+.experience-intro>p:last-child{max-width:590px;margin:22px auto 48px;font:14px/1.85 'Segoe UI',Arial,sans-serif;color:#637058}
+.experience-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;position:relative;z-index:1}
+.experience-card{display:block;text-decoration:none;position:relative;padding:14px 14px 28px;background:#faf8f1;border:1px solid #dedccb;box-shadow:0 12px 24px #33402b12;transition:transform .4s,box-shadow .4s}
+.experience-card:nth-child(2){transform:translateY(22px)}
+.experience-card:hover,.experience-card:focus-visible{transform:translateY(-7px);box-shadow:0 22px 40px #33402b25}
+.experience-card:nth-child(2):hover,.experience-card:nth-child(2):focus-visible{transform:translateY(10px)}
+.experience-photo{aspect-ratio:1.03;overflow:hidden;background:#a5ae95;position:relative}
+.experience-photo:after{content:"";position:absolute;inset:12px;border:1px solid #fff9;pointer-events:none}
+.experience-photo img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.experience-card:hover img{transform:scale(1.045)}
+.experience-number{display:block;margin-top:24px;color:#947745;font:600 10px 'Segoe UI',Arial,sans-serif;letter-spacing:.13em}
+.experience-card h3{font:400 clamp(22px,2.3vw,31px)/1.25 Georgia,serif;color:#3f4c37;margin:12px 0 25px}
+.experience-arrow{font:600 11px 'Segoe UI',Arial,sans-serif;border-bottom:1px solid #b09b73;padding-bottom:7px;color:#4c5b42}
+.experience-footnote{text-align:center;margin:65px 0 0;font:italic 18px Georgia,serif;color:#5b664e;position:relative;z-index:1}
+.between-chapters{display:grid;grid-template-columns:1fr 1fr;background:#faf8f1;gap:0;align-items:center;overflow:hidden;min-height:620px}
+.between-art{height:100%;min-height:620px;position:relative;background:#a7ad99;padding:0 0 20px 0}
+.between-art>img{width:87%;height:88%;position:absolute;left:0;top:0;object-fit:cover;box-shadow:20px 28px 44px #38453426}
+.between-smaller{position:absolute;width:47%;height:51%;bottom:4%;right:4%;padding:9px;background:#faf8f1;box-shadow:0 15px 45px #0003;transform:rotate(3deg)}
+.between-smaller img{width:100%;height:100%;object-fit:cover}
+.between-copy{padding:90px clamp(35px,7vw,110px);max-width:660px}
+.between-symbol{font:70px/1 Georgia,serif;color:#bbc1a6;display:block;margin:5px 0 20px}
+.between-copy h2{font-size:clamp(42px,4.9vw,68px)}
+.between-copy>p:not(.eyebrow){font:15px/1.9 'Segoe UI',Arial,sans-serif;color:#66715f;max-width:370px;margin:29px 0}
+.toast-section{position:relative;overflow:hidden;text-align:center;background:radial-gradient(circle at 50% 0,#667453 0%,#425238 35%,#283829 100%);padding:106px 20px 80px;color:#faf8f1}
+.toast-section:before,.toast-section:after{content:'❧';position:absolute;top:7%;font:260px Georgia,serif;color:#d7c18c14;pointer-events:none}
+.toast-section:before{left:-40px;transform:rotate(-35deg)}.toast-section:after{right:-40px;transform:rotate(145deg)}
+.toast-section .eyebrow{color:#ddc792;position:relative;z-index:2}
+.toast-stars{font:20px Georgia,serif;letter-spacing:.8em;color:#ddc792;margin-bottom:27px}
+.toast-section h2{color:#faf8f1;position:relative;z-index:2}
+.toast-section h2 em{color:#ead09c}
+.toast-action{display:grid;justify-content:center;justify-items:center;gap:22px;margin:39px auto 0}
+.toast-button{border:1px solid #dbc68b;background:#faf8f1;color:#3d4c37;display:grid;gap:13px;justify-items:center;padding:19px 30px;min-width:212px;box-shadow:0 15px 37px #12211740;transition:transform .3s,background .3s}
+.toast-button:hover{background:#efead7;transform:translateY(-4px)}
+.toast-button span:last-child{font:600 12px 'Segoe UI',Arial,sans-serif;letter-spacing:.04em}
+.toast-glasses{font:27px Georgia,serif;color:#9e7c3f}.toast-glasses b{font-weight:normal;color:#bfa26b}
+.toast-button.cheers{animation:toastPop .65s cubic-bezier(.2,.8,.3,1)}
+@keyframes toastPop{30%{transform:rotate(-3deg) scale(1.06)}60%{transform:rotate(3deg) scale(1.04)}100%{transform:none}}
+.toast-phrase{font:italic 21px/1.5 Georgia,serif;color:#ece7d7;margin:0;max-width:480px;min-height:65px}
+.toast-bottom{font:10px 'Segoe UI',Arial,sans-serif;color:#d2d7c6;margin:57px 0 0;letter-spacing:.17em;text-transform:uppercase}
+#scroll-progress{position:fixed;left:0;top:0;width:0;height:3px;background:#c6a568;z-index:1100;pointer-events:none;transition:width .08s linear}
+#to-top{position:fixed;right:21px;bottom:20px;width:49px;height:49px;border-radius:50%;background:#3e5034;color:#fdf8e8;border:1px solid #c5af77;z-index:30;box-shadow:0 8px 22px #1f301950;font:25px Georgia,serif;transition:transform .3s}
+#to-top:hover{transform:translateY(-4px)}
+@media(max-width:800px){.experience-section{padding:69px 5% 55px}.experience-cards{gap:12px}.experience-card{padding:9px 9px 23px}.experience-card h3{font-size:23px}.between-chapters{min-height:0}.between-art{min-height:500px}.between-copy{padding:50px 7%}}
+@media(max-width:620px){.foliage-frame{width:27px;opacity:.6}.foliage-frame-l{left:1%}.foliage-frame-r{right:1%}.foliage-frame span{font-size:18px}.portal-inscription{font-size:6px;letter-spacing:.12em}.restaurant-entrance:before{inset:8px}.entrance-laurel{margin-bottom:4px}.experience-section{padding:60px 6% 48px}.experience-intro h2{font-size:clamp(39px,9vw,55px)}.experience-intro>p:last-child{margin-bottom:30px}.experience-cards{grid-template-columns:1fr;gap:17px;max-width:400px;margin:0 auto}.experience-card:nth-child(2){transform:none}.experience-card:nth-child(2):hover{transform:translateY(-4px)}.experience-photo{aspect-ratio:1.6}.experience-card h3{font-size:27px;margin-bottom:16px}.experience-card{padding-bottom:24px}.experience-footnote{margin-top:42px}.between-chapters{display:block}.between-art{min-height:430px}.between-copy{padding:60px 7% 75px}.toast-section{padding:75px 16px 55px}.toast-section h2{font-size:clamp(38px,10vw,55px)}.toast-section:before,.toast-section:after{font-size:150px}.toast-phrase{font-size:18px}#to-top{right:13px;bottom:13px;width:43px;height:43px}}
+@media(prefers-reduced-motion:reduce){.experience-card,.experience-photo img,.toast-button,#to-top{transition:none!important}.toast-button.cheers{animation:none!important}#scroll-progress{transition:none!important}}

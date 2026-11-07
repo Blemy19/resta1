@@ -1,0 +1,21 @@
+/* Motion is progressive enhancement; all content works without it. */
+[hidden] { display: none !important; }
+body.welcome-open, body.dialog-open { overflow: hidden; }
+.welcome-screen { opacity: 1; transition: opacity 420ms ease, visibility 420ms ease; }
+.welcome-screen.is-closing { opacity: 0; pointer-events: none; }
+.welcome-inner { animation: welcome-arrive 650ms ease both; }
+@keyframes welcome-arrive {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+body.js-ready [data-reveal] { opacity: 0; transform: translateY(22px); transition: opacity 650ms ease, transform 650ms ease; }
+body.js-ready [data-reveal].is-visible { opacity: 1; transform: translateY(0); }
+button, a { -webkit-tap-highlight-color: transparent; }
+button:active, .button:active { transform: translateY(1px); }
+dialog[open] { animation: welcome-arrive 240ms ease both; }
+dialog::backdrop { background: rgba(10, 15, 13, .72); backdrop-filter: blur(5px); }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto !important; }
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+  body.js-ready [data-reveal] { opacity: 1; transform: none; }
+}

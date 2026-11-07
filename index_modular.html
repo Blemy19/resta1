@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#59633F"><meta name="description" content="Una invitación al aniversario de Ají Soltero: gastronomía, música, tradición y buenos momentos."><title>Aniversario de Ají Soltero · Invitación</title>
+<link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="animations.css"><link rel="stylesheet" href="theme.css"><link rel="stylesheet" href="gallery.css"><link rel="stylesheet" href="welcome.css"><link rel="stylesheet" href="embellishments.css"><link rel="stylesheet" href="premium.css"><link rel="stylesheet" href="scroll-scenes.css"><link rel="stylesheet" href="tunantada.css"><link rel="stylesheet" href="sky-effects.css"><link rel="stylesheet" href="video-intro.css"><link rel="stylesheet" href="cloud-transition.css"><link rel="stylesheet" href="mobile-v12.css"><link rel="stylesheet" href="aniversario-v13.css">
+<script src="config.js" defer></script><script src="app.js" defer></script><script src="gallery.js" defer></script><script src="events.js" defer></script><script src="welcome.js" defer></script><script src="music-manager.js" defer></script><script src="embellishments.js" defer></script><script src="scroll-scenes.js" defer></script>
+</head><body class="entrance-locked"><section id="welcome-screen" class="restaurant-entrance" role="dialog" aria-modal="true" aria-labelledby="welcome-title">
+
+  <div class="entrance-ambient" aria-hidden="true"></div>
+  <div class="entrance-photo entrance-photo-left" aria-hidden="true"></div>
+  <div class="entrance-photo entrance-photo-right" aria-hidden="true"></div>
+  <div class="entrance-orbit orbit-left" aria-hidden="true"><span></span><span></span><span></span></div>
+  <div class="entrance-orbit orbit-right" aria-hidden="true"><span></span><span></span><span></span></div>
+  <div class="entrance-topline"><span></span> ANIVERSARIO · AJÍ SOLTERO <span></span></div>
+  <div class="foliage-frame foliage-frame-l" aria-hidden="true"><span>✿</span><span>✦</span><span>✿</span></div>
+  <div class="foliage-frame foliage-frame-r" aria-hidden="true"><span>✿</span><span>✦</span><span>✿</span></div>
+  <div class="entrance-portal" aria-hidden="true">
+    <div class="entrance-interior"></div>
+    <div class="entrance-stars" aria-hidden="true"></div>
+    <span class="portal-inscription" aria-hidden="true"><span data-config="restaurantName">Ají Soltero</span> · NUESTRO ANIVERSARIO</span>
+    <div class="door door-left"><span class="door-panel"></span><span class="door-panel door-panel-lower"></span><span class="door-handle"></span></div>
+    <div class="door door-right"><span class="door-panel"></span><span class="door-panel door-panel-lower"></span><span class="door-handle"></span></div>
+    <div class="entrance-threshold"></div>
+  </div>
+  <div class="entrance-copy">
+    <div class="entrance-laurel" aria-hidden="true"><span>❧</span><b>✦</b><span>❧</span></div>
+    <p class="entrance-eyebrow">TE INVITAMOS A NUESTRO ANIVERSARIO</p>
+    <h1 id="welcome-title">Una noche especial.<br><em>Celebremos juntos.</em></h1>
+    <div class="entrance-rule" aria-hidden="true">✦</div>
+    <p class="entrance-description">Abre las puertas a nuestro aniversario:<br>una noche de sabores, brindis, tradición y buenos momentos.</p>
+    <button id="open-invitation" class="entrance-button" type="button"><span>Abrir invitación</span><span aria-hidden="true">↗</span></button>
+    <p class="entrance-hint">UN ANIVERSARIO PARA RECORDAR</p>
+  </div>
+  <p class="entrance-bottom">GASTRONOMÍA <span>·</span> COCTELERÍA <span>·</span> TRADICIÓN <span>·</span> CELEBRACIÓN</p>
+</section>
+
+
+<!-- Video de bienvenida. -->
+<section id="anniversary-film" class="anniversary-film" role="dialog" aria-modal="true" aria-label="Video de bienvenida al aniversario de Ají Soltero" hidden>
+  <div class="film-backdrop" aria-hidden="true"></div>
+  <video id="anniversary-film-video" class="film-video" src="assets/video/vuelo_aniversario_aji_soltero.mp4" poster="assets/video/portada_vuelo.jpg" preload="metadata" playsinline aria-label="Avión viajando entre las nubes y aterrizando al atardecer"></video>
+  <div class="film-tint" aria-hidden="true"></div>
+  <div class="film-grain" aria-hidden="true"></div>
+  <div class="film-frame" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+  <div class="film-brand">
+    <span class="film-eyebrow">UNA NOCHE PARA RECORDAR</span>
+    <strong data-config="restaurantName">Ají Soltero</strong>
+    <span class="film-brand-divider" aria-hidden="true"></span>
+    <span>ANIVERSARIO <i aria-hidden="true">✦</i> <span data-config="eventDate">23 de diciembre</span></span>
+  </div>
+  <div class="film-message" aria-hidden="true">
+    <span class="film-message-label">EL CAMINO A LA CELEBRACIÓN</span>
+    <p>Los mejores recuerdos<br>comienzan <em>con una invitación.</em></p>
+  </div>
+  <div class="film-actions">
+    <button id="film-sound" class="film-control" type="button" aria-pressed="true" aria-label="Silenciar video"><span class="film-sound-icon" aria-hidden="true">♫</span><span id="film-sound-label">Silenciar video</span></button>
+    <button id="film-skip" class="film-control film-control-highlight" type="button">Saltar video <span aria-hidden="true">↗</span></button>
+  </div>
+  <button id="film-play" type="button" class="film-retry" hidden>▶ Reproducir video</button>
+  <div class="film-bottom">
+    <span>AJÍ SOLTERO · NUESTRO ANIVERSARIO</span>
+    <div class="film-progress" aria-hidden="true"><span id="film-progress-bar"></span></div>
+    <span data-config="eventTime">7:00 p. m.</span>
+  </div>
+  <p id="film-error" class="film-error" role="status" hidden>El video no pudo reproducirse. Puedes entrar directamente a la invitación.</p>
+</section>
+
+
+
+<!-- Transición al aniversario. -->
+<div id="cloud-transition" class="cloud-transition" hidden aria-hidden="true">
+  <div class="cloud-cloudscape cloudscape-a"></div>
+  <div class="cloud-cloudscape cloudscape-b"></div>
+  <div class="cloud-cloudscape cloudscape-c"></div>
+  <div class="cloud-cloudscape cloudscape-d"></div>
+  <div class="cloud-cloudscape cloudscape-e"></div>
+  <div class="cloud-cloudscape cloudscape-f"></div>
+  <div class="cloud-light-bloom"></div>
+  <div class="cloud-soft-veil"></div>
+</div>
+
+<noscript><div class="noscript-notice">Activa JavaScript para abrir las puertas y disfrutar de la invitación interactiva.</div></noscript>
+<div id="site-content" hidden inert>
+<a class="skip-link" href="#invitation-content">Saltar al contenido</a>
+<header class="site-header"><a class="brand" href="#inicio"><span class="brand-mark" aria-hidden="true">✳</span><span data-config="restaurantName">Ají Soltero</span></a><nav class="nav-links" aria-label="Recorrido"><a href="#gastronomia">La mesa</a><a href="#bebidas">La barra</a><a href="#tunantada">La tradición</a><a href="#encuentro">El encuentro</a></nav><button class="text-link" id="show-welcome" type="button">La entrada ↗</button></header>
+<main id="invitation-content" tabindex="-1">
+<section class="hero celebration-hero sky-hero" id="inicio" data-scene="hero" aria-labelledby="hero-title"><div class="hero-skyback" aria-hidden="true"></div><div class="hero-content" data-reveal><div class="ornament-line" aria-hidden="true"><span>✦</span></div><p class="eyebrow">Aniversario de Ají Soltero · Invitación especial</p><h1 class="hero-title" id="hero-title">Una noche<br>para <em>celebrar.</em></h1><p id="honoree" class="honoree" data-config="honoree" hidden></p><p class="hero-copy">Celebramos un aniversario más de Ají Soltero y queremos compartir contigo una noche de gastronomía, tradición, brindis y buenos recuerdos.</p><div class="hero-date"><span data-config="eventDate">23 de diciembre</span><span aria-hidden="true">✦</span><span data-config="eventTime">7:00 p. m.</span></div><a class="button button-primary" href="#gastronomia">Comienza el recorrido <span aria-hidden="true">↓</span></a></div><div class="hero-depth-art"><div class="hero-photograph"><img data-photo="hero" src="assets/photos/flores.webp" alt="Flores blancas y follaje natural" fetchpriority="high" width="1279" height="1455"><span class="photo-seal">Una buena mesa.<br>La mejor compañía.</span><span class="hero-photo-coin" aria-hidden="true"><span data-event-day>23</span><small data-event-month>DIC</small></span></div><figure class="hero-depth-detail"aria-hidden="true"><img src="assets/photos/canapes.webp" alt="" loading="lazy" decoding="async" data-photo-group="food" data-photo-index="3" width="964" height="1600"><figcaption>El gusto de celebrar</figcaption></figure>
+<span class="hero-depth-line" aria-hidden="true"></span></div></section>
+
+<!-- Salón y ambientación. -->
+<section id="salon" class="salon-scene" data-scene="salon" aria-labelledby="salon-title">
+  <div class="salon-heading" data-reveal>
+    <p class="eyebrow">Pasa, la celebración te espera</p>
+    <h2 id="salon-title">Hay lugares que se llenan<br>de <em>buenos recuerdos.</em></h2>
+    <p>Flores, una mesa para compartir y pequeños detalles que hacen especial el encuentro.</p>
+  </div>
+  <div class="salon-stage" data-gallery aria-label="Galería de ambiente para el aniversario">
+    <div class="salon-cornice" aria-hidden="true"><span>✦</span></div>
+    <div class="salon-curtain salon-curtain-left" aria-hidden="true"></div>
+    <div class="salon-curtain salon-curtain-right" aria-hidden="true"></div>
+    <div class="salon-light salon-light-left" aria-hidden="true"></div>
+    <div class="salon-light salon-light-right" aria-hidden="true"></div>
+    <button type="button" class="salon-photo salon-detail salon-table" data-lightbox data-caption="Flores y detalles de nuestra celebración" aria-label="Ampliar la fotografía de decoración floral">
+      <img src="assets/photos/flores.webp" alt="Flores blancas y follaje sobre una mesa decorada" loading="lazy" decoding="async" width="1279" height="1455">
+      <span>La belleza de los detalles <b aria-hidden="true">↗</b></span>
+    </button>
+    <button type="button" class="salon-photo salon-center" data-lightbox data-caption="El arte de reunirnos" aria-label="Ampliar la fotografía de la mesa decorada en el jardín">
+      <img data-photo="salon" src="assets/photos/salon.webp" alt="Mesa decorada con flores y vajilla en un jardín" loading="lazy" decoding="async" width="967" height="1361">
+      <span>El arte de reunirnos <b aria-hidden="true">↗</b></span>
+    </button>
+    <button type="button" class="salon-photo salon-detail salon-balloons" data-lightbox data-caption="Olivo, marfil y dorado" aria-label="Ampliar la fotografía de globos decorativos">
+      <img src="assets/photos/globos.webp" alt="Globos de tonos verde olivo, marfil y dorado" loading="lazy" decoding="async" width="1004" height="1600">
+      <span>Un motivo para celebrar <b aria-hidden="true">↗</b></span>
+    </button>
+    <span class="salon-depth-edge" aria-hidden="true"></span>
+    <span class="salon-floor" aria-hidden="true"></span>
+  </div>
+  <div class="salon-after">
+    <p class="salon-note">Entre flores, buena compañía y detalles especiales, queremos compartir contigo un aniversario inolvidable.</p>
+    <a class="text-link" href="#gastronomia">Sigamos hacia la mesa <span aria-hidden="true">↓</span></a>
+  </div>
+</section>
+
+<section id="momentos" class="anniversary-moments" aria-labelledby="moments-title">
+  <div class="anniversary-moments-head" data-reveal>
+    <p class="eyebrow">Nuestro aniversario · Ají Soltero</p>
+    <h2 id="moments-title">Una noche llena<br>de <em>momentos especiales.</em></h2>
+    <p>Queremos celebrar contigo alrededor de una buena mesa, entre brindis, alegría y tradición. Cada momento será una ocasión para compartir.</p>
+  </div>
+  <div class="anniversary-moments-grid">
+    <a href="#gastronomia" class="anniversary-moment" aria-label="Conoce la gastronomía del aniversario">
+      <img src="assets/photos/asado.webp" width="1279" height="1350" alt="Asado de res preparado para compartir" loading="lazy" decoding="async">
+      <span class="anniversary-moment-label"><small>01 · LA MESA</small><strong>Sabores para compartir</strong><span aria-hidden="true">↗</span></span>
+    </a>
+    <a href="#bebidas" class="anniversary-moment" aria-label="Descubre la barra libre del aniversario">
+      <img src="assets/photos/cocteles.webp" width="1131" height="1265" alt="Cócteles de colores para brindar" loading="lazy" decoding="async">
+      <span class="anniversary-moment-label"><small>02 · EL BRINDIS</small><strong>Una noche para brindar</strong><span aria-hidden="true">↗</span></span>
+    </a>
+    <a href="#tunantada" class="anniversary-moment" aria-label="Descubre la Tunantada en la celebración">
+      <img src="assets/photos/tunantada-encuentro.jpeg" width="1164" height="1600" alt="Jaujina y Chuto representando la Tunantada" loading="lazy" decoding="async">
+      <span class="anniversary-moment-label"><small>03 · LA TRADICIÓN</small><strong>Celebramos nuestras raíces</strong><span aria-hidden="true">↗</span></span>
+    </a>
+  </div>
+  <p class="anniversary-swipe-hint">Desliza para descubrir más momentos ← →</p>
+</section>
+
+<section id="experiencia" class="experience-section" aria-label="Descubre los momentos de nuestra celebración">
+ <div class="experience-intro" data-reveal><p class="eyebrow">El recorrido de la noche</p><div class="experience-flourish" aria-hidden="true">✦ ───── ❦ ───── ✦</div><h2>Un encuentro para<br><em>los sentidos.</em></h2><p>Las mejores historias empiezan con una invitación. Descubre todo lo que compartiremos alrededor de una buena mesa.</p></div>
+ <div class="experience-cards">
+   <a href="#gastronomia" class="experience-card" data-reveal><div class="experience-photo"><img src="assets/photos/asado.webp" alt="Asado de res" loading="lazy" data-photo-group="food" data-photo-index="0" width="1279" height="1350"></div><span class="experience-number">01 · PARA DEGUSTAR</span><h3>Sabores que reúnen.</h3><span class="experience-arrow">Descubrir gastronomía ↗</span></a>
+   <a href="#bebidas" class="experience-card" data-reveal><div class="experience-photo"><img src="assets/photos/cocteles.webp" alt="Cócteles preparados para brindar" loading="lazy" data-photo-group="drinks" data-photo-index="0" width="1131" height="1265"></div><span class="experience-number">02 · PARA BRINDAR</span><h3>Una copa, mil momentos.</h3><span class="experience-arrow">Explorar la barra ↗</span></a>
+   <a href="#tunantada" class="experience-card" data-reveal><div class="experience-photo"><img src="assets/photos/tunantada-encuentro.jpeg" alt="Jaujina y Chuto en la Tunantada" loading="lazy" width="1164" height="1600"></div><span class="experience-number">03 · TRADICIÓN PRESENTE</span><h3>La Tunantada nos acompaña.</h3><span class="experience-arrow">Descubrir la tradición ↗</span></a>
+ </div>
+ <p class="experience-footnote">Una velada para celebrar nuestro aniversario, compartir y crear nuevos recuerdos.</p>
+</section>
+<div class="chapter-divider"><span>Sabores</span><i>✦</i><span>Brindis</span><i>✦</i><span>Buenos recuerdos</span></div>
+<section class="section food-section" id="gastronomia"><div class="section-heading" data-reveal><div><p class="eyebrow">01 / El placer de compartir</p><h2>La celebración<br>empieza <em>en la mesa.</em></h2></div><p class="section-intro">Asado de res y variedad de bocaditos.<br>Una experiencia preparada para disfrutar, compartir y deleitar el paladar.</p></div><div id="food-depth" class="food-depth" data-scene="food" aria-label="Asado de res y bocaditos en una composición fotográfica">
+  <div class="food-depth-caption"><span class="eyebrow">El placer de compartir</span><p>De la mesa<br><em>a los sentidos.</em></p><span>Asado de res · Bocaditos</span></div>
+  <div class="food-depth-art" data-gallery>
+    <span class="food-depth-plate" aria-hidden="true"></span>
+    <figure class="food-depth-main"><button type="button" class="scene-photo-button" data-lightbox aria-label="Ampliar: Asado de res servido con salsa" data-caption="Asado de res servido con salsa"><img src="assets/photos/asado.webp" alt="Asado de res servido con salsa" loading="lazy" decoding="async" data-photo-group="food" data-photo-index="0" width="1279" height="1350"></button></figure>
+    <figure class="food-depth-side"><button type="button" class="scene-photo-button" data-lightbox aria-label="Ampliar: Variedad de bocaditos sobre una mesa" data-caption="Variedad de bocaditos sobre una mesa"><img src="assets/photos/bocaditos.webp" alt="Variedad de bocaditos sobre una mesa" loading="lazy" decoding="async" data-photo-group="food" data-photo-index="1" width="1010" height="1600"></button><figcaption>Para compartir</figcaption></figure>
+    <span class="food-depth-rule" aria-hidden="true"></span>
+  </div>
+</div>
+<div data-carousel aria-label="Galería de gastronomía"><div class="carousel-track food-track" data-photo-list="food"></div><div class="carousel-controls"><span class="gallery-hint">Toca una fotografía para ampliarla</span><button data-prev aria-label="Fotografía gastronómica anterior">←</button><span data-counter aria-live="polite"></span><button data-next aria-label="Siguiente fotografía gastronómica">→</button></div></div><p class="anniversary-detail-note">Una mesa pensada para reunirnos y disfrutar de los buenos momentos.</p></section>
+<section class="bar-section" id="bebidas"><div class="bar-intro section" data-scene="bartender"><div class="bartender-grid"><div class="bartender-depth-frame"><button class="bartender-portrait" data-lightbox data-caption="Un brindis por nuestro aniversario" aria-label="Ampliar fotografía del bartender"><img data-photo="bartender" src="assets/photos/bartender.webp" alt="Bartender con camisa blanca y corbatín negro" loading="lazy" width="574" height="541"><span class="image-zoom" aria-hidden="true">↗</span></button><span class="bartender-depth-line" aria-hidden="true"></span><span class="bartender-depth-label" aria-hidden="true">EL ARTE DE COMPARTIR</span></div><div class="bartender-content" data-reveal><p class="eyebrow">02 / Detrás de cada brindis</p><h2>Barra libre.<br><em>Buenos momentos.</em></h2><p>Brindemos por los buenos momentos. Una selección de bebidas y cócteles para acompañar nuestra celebración.</p><p class="bartender-invitation">Por una noche de alegría, buenos encuentros y copas compartidas.</p><a href="#cocteles" class="text-link">Descubre la barra ↓</a></div></div></div><!-- Cócteles del aniversario. -->
+<section id="cocktail-depth" class="cocktail-depth" data-scene="cocktails" data-scene-pinned aria-labelledby="depth-cocktail-title">
+  <div class="depth-stage">
+    <div class="depth-copy">
+      <p class="eyebrow">La barra · Una celebración para compartir</p>
+      <h2 id="depth-cocktail-title" class="depth-title">El arte<br>de <em>brindar.</em></h2>
+      <p class="depth-second">Un encuentro.<br><em>Muchos brindis.</em></p>
+      <div class="depth-narrative" aria-hidden="true"><span class="depth-narrative-line">Todo empieza con un pequeño detalle.</span><span class="depth-narrative-line">Una copa invita a una conversación.</span><span class="depth-narrative-line">Y el encuentro se convierte en recuerdo.</span></div>
+      <a class="text-link depth-link" href="#cocteles">Explora las fotografías <span aria-hidden="true">↗</span></a>
+    </div>
+    <div class="depth-composition" data-gallery aria-label="Composición de fotografías de coctelería">
+      <span class="depth-orbit depth-orbit-one" aria-hidden="true"></span><span class="depth-orbit depth-orbit-two" aria-hidden="true"></span><span class="depth-reflection" aria-hidden="true"></span>
+      <figure class="depth-photo depth-photo-back"><button type="button" class="scene-photo-button" data-lightbox aria-label="Ampliar: Preparación detrás de la barra" data-caption="Preparación detrás de la barra"><img src="assets/photos/preparacion.webp" alt="Preparación detrás de la barra" loading="lazy" decoding="async" data-photo-group="drinks" data-photo-index="1" width="462" height="632"></button><figcaption>El detalle</figcaption></figure>
+      <figure class="depth-photo depth-photo-main"><button type="button" class="scene-photo-button" data-lightbox aria-label="Ampliar: Cócteles preparados para celebrar" data-caption="Cócteles preparados para celebrar"><img src="assets/photos/cocteles.webp" alt="Cócteles preparados para celebrar" loading="lazy" decoding="async" data-photo-group="drinks" data-photo-index="0" width="1131" height="1265"></button><figcaption>El arte de compartir</figcaption></figure>
+      <figure class="depth-photo depth-photo-front"><button type="button" class="scene-photo-button" data-lightbox aria-label="Ampliar: Cócteles para brindar" data-caption="Cócteles para brindar"><img src="assets/photos/brindis.webp" alt="Cócteles para brindar" loading="lazy" decoding="async" data-photo-group="drinks" data-photo-index="2" width="521" height="491"></button><figcaption>El encuentro</figcaption></figure>
+      <span class="depth-edition" aria-hidden="true">SABORES · BRINDIS · RECUERDOS</span>
+    </div>
+    <p class="depth-note">Un brindis por los momentos que nos unen.</p><span class="depth-scroll-cue" aria-hidden="true">Sigue el brindis <span>↓</span></span>
+  </div>
+</section>
+
+<div class="section cocktail-section" id="cocteles"><div class="section-heading"><div><p class="eyebrow">El arte de brindar</p><h2>Color, hielo<br>y <em>celebración.</em></h2></div><p class="section-intro">La barra libre será parte de nuestra celebración.<br>Disfruta de una noche llena de brindis y buenos recuerdos.</p></div><div data-carousel aria-label="Galería de cócteles"><div class="carousel-track" data-photo-list="drinks"></div><div class="carousel-controls"><button data-prev aria-label="Cóctel anterior">←</button><span data-counter aria-live="polite"></span><button data-next aria-label="Siguiente cóctel">→</button></div></div></div></section>
+
+<section class="between-chapters" aria-label="El encanto de los pequeños detalles">
+ <div class="between-art" aria-hidden="true"><img src="assets/photos/mesa.webp" alt="" loading="lazy" data-photo-group="food" data-photo-index="2" width="1014" height="1600"><div class="between-smaller"><img src="assets/photos/flores.webp" alt="" loading="lazy" width="1279" height="1455"></div></div>
+ <div class="between-copy" data-reveal><p class="eyebrow">Un instante para disfrutar</p><span class="between-symbol" aria-hidden="true">❦</span><h2>Los momentos<br><em>más bonitos</em><br>se comparten.</h2><p>Una mesa preparada con cariño, flores naturales, brindis y conversaciones que se convierten en recuerdos.</p><a href="#encuentro" class="text-link">Conoce los detalles de la cita ↗</a></div>
+</section>
+<section id="tunantada" class="tunantada-section" data-scene="dance" aria-labelledby="tunantada-title">
+  <div class="dance-scene">
+    <div class="dance-copy" data-reveal>
+      <p class="eyebrow">Color, tradición y celebración</p>
+      <h2 id="tunantada-title">Jaujina y<br><span>Chuto.</span></h2>
+      <div class="dance-gold-rule" aria-hidden="true">✦</div>
+      <p class="dance-lead">Una danza colorida traída desde <em>Huancayo</em>.</p>
+      <p class="dance-description">La Tunantada trasciende las raíces de muchas generaciones y también estará presente en nuestra celebración. Un apartado especial para honrar su identidad, su elegancia y su energía festiva.</p>
+      <a class="text-link dance-gallery-link" href="#ambiente">Descubre sus detalles <span aria-hidden="true">↗</span></a>
+    </div>
+    <div class="dance-art" data-gallery aria-label="Fotografías de Jaujina y Chuto en la Tunantada">
+      <span class="dance-arch dance-arch-back" aria-hidden="true"></span>
+      <span class="dance-arch dance-arch-front" aria-hidden="true"></span>
+      <button type="button" class="dance-memory" data-lightbox data-photo-window="dance-encuentro" data-caption="Jaujina y Chuto · El encuentro" aria-label="Ampliar la fotografía del encuentro de Tunantada">
+        <div class="dance-memory-window"><img src="assets/photos/tunantada-encuentro.jpeg" alt="Jaujina y Chuto en un encuentro de Tunantada, con indumentaria tradicional y máscaras" width="1164" height="1600" loading="lazy" decoding="async"></div>
+        <figcaption>Un gesto. Una tradición.</figcaption>
+      </button>
+      <figure class="dance-figure"><img src="assets/photos/tunantada-pareja.jpeg" alt="Pareja de Tunantada con sombreros, máscaras y trajes tradicionales de colores" width="1245" height="1600" loading="lazy" decoding="async"></figure>
+      <span class="dance-stage-shadow" aria-hidden="true"></span><span class="dance-stage-edge" aria-hidden="true"></span>
+      <span class="dance-margin-note" aria-hidden="true">TRADICIÓN QUE NOS REÚNE</span>
+    </div>
+  </div>
+</section>
+
+<section class="section atmosphere-section" id="ambiente"><div class="section-heading" data-reveal><div><p class="eyebrow">03 / Un lugar para recordar</p><h2>Naturalmente<br><em>especial.</em></h2></div><p class="section-intro">Flores blancas, follaje y tonos olivo. La calidez de la madera y pequeños acentos dorados para acompañar el encuentro.</p></div><div class="decor-grid" data-photo-list="decor" data-gallery></div><p class="anniversary-detail-note">Flores, tonos olivo y dorados para acompañar una celebración especial.</p></section>
+<section class="surprise-section section" id="sorpresas"><div data-reveal><p class="eyebrow">04 / Lo mejor es compartirlo</p><h2>Juegos, risas<br>y alguna <em>sorpresa.</em></h2><h3>Juegos y diversión</h3><p>Porque las mejores celebraciones se disfrutan juntos.</p><h3>Regalos sorpresa</h3><p>Todos nuestros invitados tendrán una sorpresa especial.</p></div><div class="gift-scene"><button id="gift-button" aria-expanded="false" aria-controls="gift-message" aria-label="Abrir regalo sorpresa"><span class="gift-lid" aria-hidden="true"></span><span class="gift-box" aria-hidden="true"></span><span class="gift-bow" aria-hidden="true">∞</span><span class="gift-rays" aria-hidden="true">✦<i>✧</i><b>✦</b></span><span class="gift-label">Una sorpresa para ti <span aria-hidden="true">↗</span></span></button><p id="gift-message" hidden role="status">¡Una sorpresa te espera en nuestra celebración!</p></div></section>
+
+<section id="brindis" class="toast-section" aria-labelledby="toast-title">
+ <div class="toast-stars" aria-hidden="true">✧ ✦ ✧</div><p class="eyebrow">Una pequeña invitación a brindar</p><h2 id="toast-title">Por lo que vivimos.<br><em>Y por lo que viene.</em></h2>
+ <div class="toast-action" data-reveal><button id="toast-button" class="toast-button" type="button" aria-controls="toast-phrase"><span class="toast-glasses" aria-hidden="true"><svg viewBox="0 0 120 76" width="110" height="70" fill="none" xmlns="http://www.w3.org/2000/svg"><g stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><g class="toast-glass-left"><path d="m19 9 28-6 7 29c3 16-24 22-28 6L19 9Zm24 39 4 18m-13 3 26-6"/><path d="m24 25 27-6"/></g><g class="toast-glass-right"><path d="m101 9-28-6-7 29c-3 16 24 22 28 6l7-29ZM77 48l-4 18m13 3-26-6"/><path d="m96 25-27-6"/></g><path class="toast-spark" d="M60 3v8m-6 6-6-6m18 6 6-6"/></g></svg></span><span>Hacer un brindis <span aria-hidden="true">↗</span></span></button><p id="toast-phrase" class="toast-phrase" aria-live="polite">Que nunca falten motivos para celebrar.</p></div>
+ <div class="toast-bottom">Una noche especial · <span data-config="restaurantName">Ají Soltero</span></div>
+</section>
+<section class="section encounter-section" id="encuentro"><p class="eyebrow" data-reveal>05 / Reserva este momento</p><h2>Nos vemos<br><em>alrededor de la mesa.</em></h2><div class="event-details"><div><span class="eyebrow">El día</span><p data-config="eventDate">23 de diciembre</p></div><div><span class="eyebrow">La hora</span><p data-config="eventTime">7:00 p. m.</p></div><div><span class="eyebrow">El lugar</span><p data-config="restaurantName">Ají Soltero</p><span data-config="address">América Sur 4416</span></div></div><div id="countdown" hidden aria-label="Cuenta regresiva"><div><strong data-unit="days">00</strong><span>Días</span></div><div><strong data-unit="hours">00</strong><span>Horas</span></div><div><strong data-unit="minutes">00</strong><span>Minutos</span></div><div><strong data-unit="seconds">00</strong><span>Segundos</span></div></div><p id="date-status" class="reference-note" hidden></p><button id="calendar-button" class="button button-secondary" hidden>Agregar al calendario ↓</button><div class="location-card"><div><p class="eyebrow">Te esperamos aquí</p><h3>Restaurante <span data-config="restaurantName">Ají Soltero</span></h3><p data-config="address">América Sur 4416</p><p id="maps-note" class="reference-note">Te esperamos para celebrar juntos.</p></div><a id="maps-link" class="button button-primary" href="https://maps.app.goo.gl/FFGoJoN9sKyaPjwx7" target="_blank" rel="noopener noreferrer">Cómo llegar ↗</a></div><div class="rsvp"><p id="rsvp-note" hidden></p><a id="rsvp-link" class="button button-primary" hidden target="_blank" rel="noopener noreferrer">Confirmar asistencia ↗</a></div></section>
+<section class="farewell"><p class="eyebrow">Con mucho cariño</p><h2>Los mejores momentos<br>se disfrutan en<br><em>buena compañía.</em></h2><p>Será un placer compartir esta noche especial contigo.</p><a href="#inicio" class="text-link">Volver al inicio ↑</a></section>
+</main><footer class="site-footer"><span class="brand" data-config="restaurantName">Ají Soltero</span><span>Una celebración para recordar.</span><button id="music-toggle" hidden aria-pressed="false" class="button button-secondary">Activar música</button></footer></div>
+<audio id="ambient-audio" loop preload="none"></audio>
+<dialog id="photo-dialog" aria-label="Fotografía ampliada" aria-describedby="lightbox-caption"><button id="close-lightbox" aria-label="Cerrar fotografía">×</button><div id="lightbox-frame"><img id="lightbox-image" alt=""></div><p id="lightbox-caption"></p><div class="lightbox-controls"><button id="photo-prev" aria-label="Fotografía anterior">←</button><button id="photo-next" aria-label="Fotografía siguiente">→</button></div></dialog>
+<div id="scroll-progress" aria-hidden="true"></div><button id="to-top" aria-label="Volver al comienzo de la invitación" title="Volver arriba" hidden>↑</button>
+</body></html>

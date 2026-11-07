@@ -1,0 +1,102 @@
+/* V13 — Invitación de aniversario: composición limpia y centrada en los invitados.
+   Sin textos técnicos y con fotos protagonistas en móviles. */
+.anniversary-moments {
+  position:relative; overflow:hidden; padding:clamp(65px,7vw,115px) 5%;
+  background:linear-gradient(165deg,#f5f1e4 0%,#e8ecdd 55%,#f7f3e9 100%);
+  border-block:1px solid #c6b58d80; color:#34432c;
+}
+.anniversary-moments-head {max-width:740px;margin:0 auto clamp(28px,4vw,47px);text-align:center}
+.anniversary-moments-head .eyebrow {color:#897148;margin-bottom:14px}
+.anniversary-moments-head h2 {font:400 clamp(37px,4.7vw,65px)/1.09 var(--serif);letter-spacing:-.04em;margin:0 auto 18px;text-wrap:balance}
+.anniversary-moments-head h2 em {color:#997a4c;font-weight:400}
+.anniversary-moments-head>p:last-child{max-width:54ch;margin:auto;color:#647057;font-size:14px;line-height:1.75}
+.anniversary-moments-grid {max-width:1170px;margin:auto;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(15px,2.5vw,30px)}
+.anniversary-moment{position:relative;display:block;min-width:0;aspect-ratio:4/5;overflow:hidden;border:6px solid #f9f7ef;outline:1px solid #c5b18b;border-radius:165px 165px 7px 7px;box-shadow:0 14px 30px #37422b24;color:#fff8e8;text-decoration:none;background:#d6ddc8;isolation:isolate}
+.anniversary-moment img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.anniversary-moment:hover img,.anniversary-moment:focus-visible img {transform:scale(1.045)}
+.anniversary-moment:after{content:'';position:absolute;inset:0;z-index:0;background:linear-gradient(transparent 39%,#19271c0d 53%,#152719dd 100%);pointer-events:none}
+.anniversary-moment-label{position:absolute;z-index:1;bottom:20px;left:17px;right:17px;display:grid;grid-template-columns:1fr auto;gap:6px;align-items:end;text-shadow:0 1px 8px #16231990}
+.anniversary-moment-label small{grid-column:1/-1;font:600 10px/1.4 var(--sans);letter-spacing:.13em;color:#f2d7a3}
+.anniversary-moment-label strong{font:italic 400 clamp(20px,2.1vw,29px)/1.2 var(--serif);letter-spacing:-.015em}
+.anniversary-moment-label>span{font:400 24px/1 var(--sans)}
+.anniversary-swipe-hint{display:none}
+.anniversary-detail-note{color:#65715d;font-size:12px;line-height:1.7;max-width:56ch;margin:20px auto 0}
+.bartender-invitation{font-style:italic;color:#72806b!important}
+/* Mantener la fotografía del ambiente en un marco de fácil lectura. */
+@media(max-width:900px){
+  .anniversary-moments-grid{gap:15px}
+  .anniversary-moment{border-width:5px}
+  .anniversary-moment-label{left:12px;right:12px;bottom:14px}
+  .anniversary-moment-label strong{font-size:21px}
+}
+@media(max-width:680px){
+  html{scroll-padding-top:100px}
+  #invitation-content > section{scroll-margin-top:100px}
+  /* Cabecera compacta: las fotos ganan espacio vertical. */
+  .site-header {padding:7px 14px 8px!important;gap:2px 8px!important;min-height:0!important;background:#fbfaf5ef;backdrop-filter:blur(12px)}
+  .site-header .brand{font-size:11px!important;letter-spacing:.055em;gap:6px}
+  .site-header .brand-mark{font-size:25px}
+  .site-header > #show-welcome{font-size:10px;min-height:30px!important;padding:0 2px!important}
+  .site-header .nav-links{padding-top:5px!important;padding-bottom:1px!important;gap:5px!important;justify-content:space-between!important;overflow-x:auto}
+  .site-header .nav-links a{min-height:34px!important;padding:4px 9px!important;font-size:10px!important;white-space:nowrap}
+  .hero{padding-top:34px}
+  /* Salón: galería sin transformaciones que recorten o superpongan imágenes. */
+  .salon-scene{padding:48px 14px 40px!important;overflow:hidden}
+  .salon-scene::before{inset:7px}
+  .salon-heading{padding:0 9px!important;margin-bottom:25px!important}
+  .salon-heading h2{font-size:clamp(34px,9vw,46px)!important}
+  .salon-stage{
+    display:grid!important;position:relative!important;grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;
+    grid-template-rows:auto auto!important;align-items:stretch!important;justify-items:stretch!important;
+    gap:12px!important;min-height:0!important;height:auto!important;
+    padding:21px 14px 17px!important;width:100%!important;max-width:530px!important;
+    overflow:visible!important;perspective:none!important;transform-style:flat!important;
+    background:linear-gradient(165deg,#e2e5d5,#f8f5eb 58%,#e5e7d8);
+    box-shadow:0 10px 25px #2f39221f,inset 0 0 0 4px #f4f0e5!important;
+  }
+  .salon-stage::before,.salon-stage::after,.salon-cornice,.salon-curtain,.salon-light,.salon-floor,.salon-depth-edge {display:none!important}
+  .salon-stage .salon-photo{
+    position:relative!important;inset:auto!important;display:block!important;width:100%!important;
+    margin:0!important;height:auto!important;max-height:none!important;min-height:0!important;
+    padding:0!important;transform:none!important;transform-style:flat!important;
+    border:4px solid #faf8f1!important;outline:1px solid #b9a171;border-radius:7px;
+    overflow:hidden!important;box-shadow:0 8px 20px #34402f29!important;
+  }
+  body.scene-motion [data-scene="salon"] .salon-stage .salon-photo{transform:none!important}
+  .salon-stage .salon-center{grid-column:1/-1!important;grid-row:1!important;aspect-ratio:4/4.8!important;border-radius:46% 46% 6px 6px!important}
+  .salon-stage .salon-table{grid-column:1!important;grid-row:2!important;aspect-ratio:4/4.6!important}
+  .salon-stage .salon-balloons{grid-column:2!important;grid-row:2!important;aspect-ratio:4/4.6!important}
+  .salon-stage .salon-photo img{position:static!important;width:100%!important;height:100%!important;object-fit:cover!important;display:block!important}
+  .salon-stage .salon-center img{object-position:50% 45%!important}
+  .salon-stage .salon-photo>span{left:8px!important;right:8px!important;bottom:9px!important;font-size:clamp(11px,3.4vw,16px)!important;line-height:1.18!important}
+  .salon-stage .salon-center>span{font-size:clamp(17px,5vw,24px)!important;bottom:17px!important;left:15px!important}
+  .salon-stage .salon-photo b{font-size:12px!important}
+  .salon-after{margin-top:20px!important;gap:9px!important;padding-inline:7px!important}
+  .salon-after .salon-note{font-size:12px;line-height:1.6;max-width:37ch;color:#586447}
+  /* En lugar de un demo técnico: invitación a los mejores momentos. */
+  .anniversary-moments{padding:64px 0 60px}
+  .anniversary-moments-head{padding:0 22px;margin:0 auto 24px}
+  .anniversary-moments-head h2{font-size:clamp(36px,9.7vw,51px)}
+  .anniversary-moments-head p:last-child{font-size:13px;line-height:1.7}
+  .anniversary-moments-grid{display:flex;gap:15px;overflow-x:auto;scroll-snap-type:x mandatory;
+    padding:8px max(19px,calc((100% - 510px)/2)) 27px;scrollbar-width:none;overscroll-behavior-x:contain}
+  .anniversary-moments-grid::-webkit-scrollbar{display:none}
+  .anniversary-moment{flex:0 0 min(77vw,335px);width:min(77vw,335px);aspect-ratio:4/4.9;
+    border-radius:150px 150px 6px 6px;scroll-snap-align:center;box-shadow:0 12px 20px #37422b22}
+  .anniversary-moment-label strong{font-size:24px}
+  .anniversary-swipe-hint{display:block;margin:0 auto;text-align:center;color:#677458;font-size:12px;letter-spacing:.06em}
+  /* Música más discreta y fuera del contenido central. */
+  #music-toggle:not([hidden]){left:10px!important;bottom:calc(12px + env(safe-area-inset-bottom,0px))!important;
+    width:auto!important;max-width:118px!important;min-height:42px!important;padding:8px 12px!important;
+    font-size:11px!important;letter-spacing:0!important;white-space:nowrap;border-radius:999px;z-index:50}
+  #to-top{right:10px!important;bottom:calc(12px + env(safe-area-inset-bottom,0px))!important;width:42px!important;height:42px!important}
+  /* Quitar al texto de la sección la sensación de ficha técnica. */
+  .section-intro,.anniversary-detail-note,.depth-note{color:#607052}
+}
+@media(max-width:380px){
+  .site-header{padding-inline:11px!important}
+  .site-header .nav-links a{padding-inline:7px!important;font-size:9.5px!important}
+  .salon-stage{padding:16px 10px 12px!important;gap:9px!important}
+  .salon-stage .salon-photo>span{font-size:11px!important}
+}
+@media(prefers-reduced-motion:reduce){.anniversary-moment img{transition:none}}

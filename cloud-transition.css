@@ -1,0 +1,39 @@
+/* V11: las nubes envuelven la imagen, la cubren por completo y luego
+   se disuelven para mostrar la portada que ya está bajo ellas. */
+.cloud-transition[hidden]{display:none!important}
+.cloud-transition{position:fixed;inset:0;z-index:1700;pointer-events:none;overflow:hidden;isolation:isolate;background:transparent;--cloud-time:3600ms}
+.cloud-transition.is-fast{--cloud-time:1400ms}
+.cloud-cloudscape{position:absolute;inset:-18%;background-position:center;background-repeat:no-repeat;background-size:contain;opacity:0;filter:blur(7px) saturate(.65) brightness(1.2);will-change:transform,opacity;transform-origin:center center}
+.cloudscape-a{background-image:url('assets/clouds/cloud_01.png');inset:-18% 18% 3% -42%;transform-origin:17% 38%}
+.cloudscape-b{background-image:url('assets/clouds/cloud_03.png');inset:-18% -42% 3% 18%;transform-origin:83% 37%}
+.cloudscape-c{background-image:url('assets/clouds/cloud_05.png');inset:32% 7% -37% -27%;transform-origin:33% 83%}
+.cloudscape-d{background-image:url('assets/clouds/cloud_02.png');inset:30% -28% -37% 8%;transform-origin:72% 80%}
+.cloudscape-e{background-image:url('assets/clouds/cloud_07.png');inset:-37% 2% 27% -12%;transform-origin:46% 6%}
+.cloudscape-f{background-image:url('assets/clouds/cloud_08.png');inset:-3% -15% -7% -15%;transform-origin:center}
+.cloud-light-bloom{position:absolute;inset:-25%;opacity:0;background:
+  radial-gradient(ellipse at 22% 46%,rgba(251,252,250,.94) 0,rgba(251,252,250,.77) 19%,transparent 44%),
+  radial-gradient(ellipse at 78% 53%,rgba(249,251,251,.95) 0,rgba(249,251,251,.77) 18%,transparent 43%),
+  radial-gradient(ellipse at 50% 65%,rgba(255,250,238,.84) 0,rgba(255,250,238,.56) 23%,transparent 59%),
+  radial-gradient(ellipse at 52% 19%,rgba(242,248,252,.81) 0,transparent 50%);
+  filter:blur(25px);will-change:opacity,transform}
+.cloud-soft-veil{position:absolute;inset:-5%;opacity:0;background:
+  url("assets/clouds/nubes_fundido.webp") center / cover no-repeat;
+  filter:blur(4px);will-change:opacity,transform}
+.cloud-transition.is-active .cloudscape-a{animation:cloud-arrive-a var(--cloud-time) cubic-bezier(.35,.05,.26,.98) both}
+.cloud-transition.is-active .cloudscape-b{animation:cloud-arrive-b var(--cloud-time) cubic-bezier(.35,.05,.26,.98) both}
+.cloud-transition.is-active .cloudscape-c{animation:cloud-arrive-c var(--cloud-time) cubic-bezier(.35,.05,.26,.98) both}
+.cloud-transition.is-active .cloudscape-d{animation:cloud-arrive-d var(--cloud-time) cubic-bezier(.35,.05,.26,.98) both}
+.cloud-transition.is-active .cloudscape-e{animation:cloud-arrive-e var(--cloud-time) cubic-bezier(.35,.05,.26,.98) both}
+.cloud-transition.is-active .cloudscape-f{animation:cloud-arrive-f var(--cloud-time) cubic-bezier(.35,.05,.26,.98) both}
+.cloud-transition.is-active .cloud-light-bloom{animation:cloud-bloom var(--cloud-time) ease-in-out both}
+.cloud-transition.is-active .cloud-soft-veil{animation:cloud-veil var(--cloud-time) ease-in-out both}
+@keyframes cloud-arrive-a{0%{opacity:0;transform:translate3d(-32%,13%,0) scale(.74)}36%{opacity:.88;transform:translate3d(5%,0,0) scale(1.17)}49%{opacity:1;transform:translate3d(7%,-2%,0) scale(1.33)}100%{opacity:0;transform:translate3d(31%,-18%,0) scale(1.78)}}
+@keyframes cloud-arrive-b{0%{opacity:0;transform:translate3d(35%,-8%,0) scale(.76)}37%{opacity:.92;transform:translate3d(-2%,0,0) scale(1.23)}49%{opacity:1;transform:translate3d(-6%,3%,0) scale(1.4)}100%{opacity:0;transform:translate3d(-34%,19%,0) scale(1.9)}}
+@keyframes cloud-arrive-c{0%{opacity:0;transform:translate3d(-17%,47%,0) scale(.7)}38%{opacity:.92;transform:translate3d(0,-7%,0) scale(1.16)}50%{opacity:1;transform:translate3d(3%,-12%,0) scale(1.39)}100%{opacity:0;transform:translate3d(17%,-37%,0) scale(1.82)}}
+@keyframes cloud-arrive-d{0%{opacity:0;transform:translate3d(15%,43%,0) scale(.8)}38%{opacity:.91;transform:translate3d(0,-9%,0) scale(1.22)}50%{opacity:1;transform:translate3d(-4%,-14%,0) scale(1.42)}100%{opacity:0;transform:translate3d(-26%,-39%,0) scale(1.83)}}
+@keyframes cloud-arrive-e{0%{opacity:0;transform:translate3d(0,-50%,0) scale(.8)}36%{opacity:.8;transform:translate3d(0,8%,0) scale(1.3)}50%{opacity:1;transform:translate3d(2%,14%,0) scale(1.4)}100%{opacity:0;transform:translate3d(0,48%,0) scale(1.73)}}
+@keyframes cloud-arrive-f{0%{opacity:0;transform:translate3d(0,10%,0) scale(.8)}40%{opacity:.4;transform:translate3d(0,0,0) scale(1.25)}52%{opacity:.64;transform:translate3d(0,0,0) scale(1.44)}100%{opacity:0;transform:translate3d(0,-14%,0) scale(2.1)}}
+@keyframes cloud-bloom{0%,15%{opacity:0;transform:scale(.83)}36%{opacity:.64;transform:scale(1)}46%,55%{opacity:1;transform:scale(1.06)}100%{opacity:0;transform:scale(1.32)}}
+@keyframes cloud-veil{0%,22%{opacity:0}38%{opacity:.90}43%,55%{opacity:1}72%{opacity:.62}100%{opacity:0}}
+@media(max-width:700px){.cloud-cloudscape{filter:blur(5px) saturate(.7) brightness(1.16)}.cloudscape-a{inset:-8% 0% 5% -63%}.cloudscape-b{inset:-8% -63% 5% 0}.cloudscape-c{inset:20% -10% -44% -40%}.cloudscape-d{inset:20% -40% -44% -10%}.cloudscape-e{inset:-43% -15% 32% -15%}.cloudscape-f{inset:-10% -45% -10% -45%}}
+@media(prefers-reduced-motion:reduce){.cloud-transition.is-active .cloud-cloudscape,.cloud-transition.is-active .cloud-light-bloom,.cloud-transition.is-active .cloud-soft-veil{animation:none!important}}

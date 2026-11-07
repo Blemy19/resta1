@@ -1,0 +1,138 @@
+/* V3 · Escenarios editoriales. Fotografías originales, sin recursos externos. */
+.salon-scene {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 88px max(5%, calc((100vw - 1280px) / 2)) 56px;
+  background: radial-gradient(ellipse at 50% 54%, #fffdf4 0%, #eeecdd 56%, #dedfcd 100%);
+  color: #34402d;
+  border-block: 1px solid #c6a56870;
+}
+.salon-scene::before {
+  content: '';
+  position: absolute;
+  inset: 20px;
+  border: 1px solid #c6a56866;
+  pointer-events: none;
+  z-index: -1;
+}
+.salon-heading { position: relative; text-align: center; max-width: 770px; margin: 0 auto 45px; }
+.salon-heading .eyebrow { color: #82683d; }
+.salon-heading h2 { font: 400 clamp(38px, 4.8vw, 68px)/1.08 var(--serif); letter-spacing: -.035em; margin: 0; }
+.salon-heading h2 em { font-weight: 400; color: #987443; }
+.salon-heading > p:last-child { max-width: 470px; margin: 24px auto 0; font-size: 14px; line-height: 1.8; color: #68715f; }
+.salon-stage {
+  position: relative;
+  display: grid;
+  grid-template-columns: .7fr 1.35fr .7fr;
+  align-items: end;
+  gap: 30px;
+  max-width: 1140px;
+  margin-inline: auto;
+  min-height: 640px;
+  padding: 72px 72px 58px;
+  background: radial-gradient(ellipse at 50% 0%, #f2e4bd88, transparent 60%), linear-gradient(90deg, #bec6ab 0%, #e8eadb 18%, #f1efdf 50%, #e8eadb 82%, #bec6ab 100%);
+  border: 1px solid #b49a67;
+  box-shadow: 0 22px 50px #35402d24, inset 0 0 0 8px #f6f3e7, inset 0 0 0 10px #c6a56866;
+}
+.salon-stage::before { content: ''; position: absolute; inset: 39px 42px 57px; border: 1px solid #9c8a5d80; pointer-events: none; }
+.salon-stage::after { content: ''; position: absolute; left: 16%; right: 16%; bottom: 36px; height: 18px; border-radius: 50%; background: #352c20; filter: blur(15px); opacity: .27; pointer-events: none; }
+.salon-cornice { position: absolute; top: 20px; left: 24px; right: 24px; height: 16px; border-block: 1px solid #a48b55; background: linear-gradient(#e5d6ae, #f4edd6 55%, #beaa77); box-shadow: 0 5px 12px #473d2929; z-index: 3; text-align: center; }
+.salon-cornice span { display: inline-block; position: relative; top: -12px; padding: 0 15px; background: #eeeddd; color: #9a7946; font-size: 24px; }
+.salon-curtain { position: absolute; top: 35px; bottom: 52px; width: 8%; background: repeating-linear-gradient(90deg, #35432c 0%, #72825a 18%, #4c5a3a 34%, #7e8b63 52%, #435032 72%, #67764f 100%); box-shadow: 5px 4px 15px #27351d44; z-index: 2; pointer-events: none; }
+.salon-curtain::after { content: ''; position: absolute; top: 54%; width: 100%; height: 8px; background: linear-gradient(#e7d3a0, #a7894f); box-shadow: 0 2px 4px #2c362744; transform: rotate(-9deg); }
+.salon-curtain-left { left: 13px; clip-path: polygon(0 0, 100% 0, 67% 55%, 100% 100%, 0 100%); }
+.salon-curtain-right { right: 13px; transform: scaleX(-1); clip-path: polygon(0 0, 100% 0, 67% 55%, 100% 100%, 0 100%); }
+.salon-light { position: absolute; top: 70px; width: 7px; height: 42px; border-radius: 9px; background: #ffefbe; box-shadow: 0 0 11px 5px #efd09688, 0 0 54px 25px #f6d28a45; z-index: 1; }
+.salon-light-left { left: 21%; }.salon-light-right { right: 21%; }
+.salon-photo { display: block; position: relative; padding: 0; min-width: 0; margin: 0; overflow: hidden; border: 5px solid #ede5cd; outline: 1px solid #b39861; background: #dedbca; box-shadow: 0 16px 24px #323b2940; z-index: 2; cursor: zoom-in; text-align: left; }
+.salon-photo::after { content: ''; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(transparent 68%, #1a281ad9); }
+.salon-photo img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .65s ease; }
+.salon-photo:hover img,.salon-photo:focus-visible img { transform: scale(1.035); }
+.salon-photo:focus-visible { outline: 3px solid #34402d; outline-offset: 5px; }
+.salon-photo > span { position: absolute; bottom: 19px; left: 16px; right: 16px; z-index: 1; color: #fffaf0; font: italic 20px/1.2 var(--serif); text-shadow: 0 2px 4px #0009; }
+.salon-photo b { font: 16px var(--sans); float: right; margin-left: 5px; }
+.salon-center { height: 520px; border-radius: 220px 220px 3px 3px; }
+.salon-center img { object-position: 58% 50%; }
+.salon-detail { height: 330px; margin-bottom: 24px; }
+.salon-detail > span { font-size: 17px; }
+.salon-table { transform: perspective(1000px) rotateY(7deg); }
+.salon-balloons { transform: perspective(1000px) rotateY(-7deg); }
+.salon-floor { position: absolute; bottom: 10px; left: 10px; right: 10px; height: 46px; background: repeating-linear-gradient(90deg, transparent 0 80px, #765a3920 80px 81px), linear-gradient(#a68f6e44, #e0d1b1); border-top: 1px solid #b39c73; }
+.salon-after { display: flex; align-items: center; justify-content: space-between; gap: 25px; max-width: 1140px; margin: 24px auto 0; }
+.salon-note { font-size: 11px; line-height: 1.65; color: #656d58; margin: 0; }
+.salon-after .text-link { flex-shrink: 0; font-size: 12px; }
+/* La mesa: un pliego fotográfico cálido, con una pieza principal. */
+#gastronomia { position: relative; }
+#gastronomia .food-track { gap: 27px; align-items: center; padding: 14px 5px 28px; }
+#gastronomia .food-track .photo-card { flex-basis: min(71vw, 280px); aspect-ratio: 3/4; border: 8px solid #f0e7d4; outline: 1px solid #c6ad7d; box-shadow: 0 14px 22px #6c4d2726; }
+#gastronomia .food-track .photo-card:first-child { flex-basis: min(82vw, 450px); aspect-ratio: 1/1.08; }
+#gastronomia .food-track .photo-card:nth-child(3) { aspect-ratio: 3/3.7; }
+#gastronomia .food-track .photo-card::before { content: ''; position: absolute; inset: 8px; z-index: 1; border: 1px solid #fff6; pointer-events: none; }
+#gastronomia .food-track .photo-caption { font-size: 22px; bottom: 24px; }
+#gastronomia .food-track .photo-caption small { color: #f1d5a2; }
+/* Dos fotografías reales, sin columnas vacías: rincón de celebración. */
+#ambiente { position: relative; }
+#ambiente .decor-grid { display: grid; grid-template-columns: 1.15fr .85fr; align-items: center; gap: clamp(20px, 5vw, 66px); padding: 40px clamp(20px, 4vw, 55px) 52px; background: radial-gradient(ellipse at 60% 20%, #fcfaf0 0%, #ecebdb 65%, #d9dfc9); border: 1px solid #c6a56880; box-shadow: inset 0 0 0 11px #f9f6e8, inset 0 0 0 12px #c6a56866; position: relative; }
+#ambiente .decor-grid::before { content: '❦'; position: absolute; right: 4%; top: -21px; font: 47px/1 Georgia, serif; color: #a38b57; background: #faf8f1; padding-inline: 14px; }
+#ambiente .decor-grid .photo-card { margin: 0; width: 100%; aspect-ratio: 4/4.7; border: 7px solid #f9f5e8; outline: 1px solid #b6a274; box-shadow: 0 20px 30px #36402d2b; }
+#ambiente .decor-grid .photo-card:first-child { border-radius: 240px 240px 2px 2px; }
+#ambiente .decor-grid .photo-card:nth-child(2) { margin-top: 80px; aspect-ratio: 3/4; transform: rotate(2deg); }
+#ambiente .decor-grid .photo-caption { font-size: clamp(20px, 2.2vw, 29px); left: 24px; right: 24px; bottom: 27px; }
+#ambiente .reference-note { max-width: 650px; }
+@media (max-width: 900px) {
+  .salon-scene { padding: 65px 5% 42px; }
+  .salon-stage { gap: 18px; padding: 65px 48px 50px; min-height: 500px; }
+  .salon-center { height: 410px; }.salon-detail { height: 270px; }
+  .salon-photo > span { left: 10px; right: 10px; font-size: 16px; }
+  .salon-detail > span { font-size: 14px; }
+}
+@media (max-width: 600px) {
+  .salon-scene { padding: 55px 5% 35px; }
+  .salon-scene::before { inset: 10px; }
+  .salon-heading { margin-bottom: 28px; padding-inline: 8px; }
+  .salon-heading h2 { font-size: clamp(33px, 8.2vw, 46px); }
+  .salon-heading > p:last-child { font-size: 13px; }
+  .salon-stage { grid-template-columns: 1fr 1fr; gap: 15px; padding: 48px 30px 40px; min-height: 0; }
+  .salon-center { grid-column: 1 / -1; grid-row: 1; height: 370px; border-width: 4px; }
+  .salon-detail { height: 180px; margin: 0; border-width: 3px; transform: none; }
+  .salon-detail > span { font-size: 14px; bottom: 12px; }
+  .salon-curtain { width: 8%; bottom: 35px; }
+  .salon-curtain-left { left: 8px; }.salon-curtain-right { right: 8px; }
+  .salon-stage::before { inset: 34px 18px 34px; }
+  .salon-cornice { left: 14px; right: 14px; top: 17px; height: 12px; }
+  .salon-light { top: 44px; height: 27px; width: 4px; }
+  .salon-light-left { left: 12%; }.salon-light-right { right: 12%; }
+  .salon-floor { height: 25px; }
+  .salon-after { flex-direction: column; text-align: center; gap: 18px; padding-inline: 10px; }
+  #gastronomia .food-track { gap: 19px; }
+  #gastronomia .food-track .photo-card { flex-basis: 71vw; border-width: 6px; }
+  #gastronomia .food-track .photo-card:first-child { flex-basis: 78vw; }
+  #ambiente .decor-grid { gap: 18px; padding: 25px 22px 32px; grid-template-columns: 1fr; }
+  #ambiente .decor-grid .photo-card { aspect-ratio: 4/4.5; }
+  #ambiente .decor-grid .photo-card:nth-child(2) { width: 86%; justify-self: center; margin-top: 8px; aspect-ratio: 4/4.2; }
+  #ambiente .decor-grid .photo-caption { font-size: 23px; left: 17px; right: 17px; bottom: 22px; }
+}
+@media (prefers-reduced-motion: reduce) { .salon-photo img { transition: none; } }
+
+/* Shared refinements on the retained special edition. */
+.site-header .nav-links a, .site-header .text-link { min-height: 44px; display: inline-flex; align-items: center; }
+.gallery-hint { margin-right: auto; font-size: 11px; color: var(--muted); }
+.toast-glasses svg { overflow: visible; }
+.toast-glass-left { transform-origin: 45px 65px; }
+.toast-glass-right { transform-origin: 75px 65px; }
+.cheers .toast-glass-left { animation: clink-left .8s ease; }
+.cheers .toast-glass-right { animation: clink-right .8s ease; }
+.cheers .toast-spark { animation: clink-spark .8s ease; }
+@keyframes clink-left { 35% { transform: rotate(10deg); } }
+@keyframes clink-right { 35% { transform: rotate(-10deg); } }
+@keyframes clink-spark { 35% { opacity: 1; transform: translateY(-4px); } 100% { opacity: .5; } }
+.gift-rays { position: absolute; inset: 30px 0 90px; color: #a78542; font: 37px/1 Georgia,serif; pointer-events: none; opacity: 0; transform: translateY(50px) scale(.4); transition: opacity .5s, transform .8s; }
+.gift-rays i { position: absolute; left: 15px; top: 60px; font-style: normal; font-size: 20px; }
+.gift-rays b { position: absolute; right: 7px; top: 20px; font-weight: 400; font-size: 27px; }
+#gift-button[aria-expanded=true] .gift-rays { opacity: 1; transform: translateY(0) scale(1); }
+#gift-button[aria-expanded=true] .gift-box { box-shadow: inset 0 14px 18px #fff1bc66, 0 0 45px #c6a56855; }
+.noscript-notice { position: fixed; left: 12px; right: 12px; bottom: 12px; z-index: 2000; background: #faf8f1; color: #34402d; padding: 12px; border: 1px solid #c6a568; font-size: 13px; text-align: center; }
+[tabindex="-1"]:focus:not(:focus-visible), #hero-title:focus { outline: none; }
+@media (max-width: 500px) { .site-header { gap: 3px 12px; } .carousel-controls { flex-wrap: wrap; } .gallery-hint { flex: 1 0 100%; margin-bottom: 5px; } }
+@media (prefers-reduced-motion: reduce) { .cheers .toast-glass-left,.cheers .toast-glass-right,.cheers .toast-spark { animation: none; } .gift-rays { transition: none; } }
